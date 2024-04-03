@@ -1,24 +1,30 @@
+
 public class Main {
     public static void main(String[] args)
 {
-	// mayor numero = mayor prioridad 
-	PryQ.enqueue(10, 2);
-	PryQ.enqueue(14, 4);
-	PryQ.enqueue(16, 4);
-	PryQ.enqueue(12, 3);
-    PryQ.enqueue(27, 1);
-    PryQ.enqueue(77, 5);
+	PryQ<String> pq = new PryQ<String>();
+	pq.Enqueue("E");
+	pq.Enqueue("A");
 
+	System.out.println("Size of pq is : " + pq.Count() + " and Peek Element is : " + pq.Peek());
 
-	int ind = PryQ.peek();
-	System.out.println(PryQ.pr[ind].value);
-	PryQ.dequeue();
+	pq.Enqueue("B");
+	pq.Enqueue("C");
+	System.out.println("Size of pq is : " + pq.Count() + " and Peek Element is : " + pq.Peek());
 
-	ind = PryQ.peek();
-	System.out.println(PryQ.pr[ind].value);
-	PryQ.dequeue();
+	pq.Dequeue();
+	System.out.println("Size of pq is : " + pq.Count() + " and Peek Element is : " + pq.Peek());
 
-	ind = PryQ.peek();
-	System.out.println(PryQ.pr[ind].value);
+	pq.Dequeue();
+	System.out.println("Size of pq is : " + pq.Count() + " and Peek Element is : " + pq.Peek());
+	pq.Enqueue("D");
+	System.out.println("Size of pq is : " + pq.Count() + " and Peek Element is : " + pq.Peek());
+	pq.Dequeue();
+	System.out.println("Size of pq is : " + pq.Count() + " and Peek Element is : " + pq.Peek());
+	pq.Dequeue();
+	System.out.println("Size of pq is : " + pq.Count() + " and Peek Element is : " + pq.Peek());
+	pq.Dequeue();
+	System.out.println("Size of pq is : " + pq.Count() + " and Peek Element is : " + pq.Peek());
 }
 }
+
