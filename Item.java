@@ -11,6 +11,22 @@ public class Item {
         this.sintoma = sintoma;
         this.gravedad = gravedad;
     }
+    public int getGravedadValue() {
+    switch (gravedad) {
+        case "A":
+            return 1;
+        case "B":
+            return 2;
+        case "C":
+            return 3;
+        case "D":
+            return 4;
+        case "E":
+            return 5;
+        default:
+            return 0; // Valor por defecto en caso de gravedad desconocida
+    }
+}
 
     public String getAll() {
         return "Nombre: " + nombre + ", Apellido: " + apellido + ", Síntoma: " + sintoma;
